@@ -1,0 +1,39 @@
+# APP enviroment
+spring.profiles.active=@activatedProperties@
+
+# Logging pattern for the console
+logging.pattern.console= %d{yyyy-MM-dd HH:mm:ss}:%clr(%5p) %class{0} - %msg%n
+spring.main.banner-mode=OFF
+spring.main.log-startup-info=OFF
+logging.level.org=INFO
+logging.level.com.zaxxer=INFO
+logging.level.org.springframework=INFO
+logging.level.org.hibernate.SQL=DEBUG
+
+
+# Database Properties
+spring.datasource.driverClassName=org.postgresql.Driver
+spring.datasource.url=jdbc:postgresql://192.168.222.62:5432/pruebas
+spring.datasource.username=postgres
+spring.datasource.password=postgres
+
+# Hibernate Properties
+spring.jpa.properties.hibernate.jdbc.batch_size=500
+spring.jpa.properties.hibernate.dialect=com.millenium.etl.common.util.hibernate.dialect.PostgreSQL92EtlDialect
+spring.jpa.properties.hibernate.default_schema=colpatriaui
+# Propiedad para generar el SQL con el nombre de los atributos en minusculas y sin underline
+spring.jpa.hibernate.naming.physical-strategy=org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+spring.jpa.hibernate.ddl-auto=update
+#used to control whether we should consult the JDBC metadata to determine certain Settings default values when the database may not be available (mainly in tools usage).
+#https://docs.jboss.org/hibernate/orm/5.4/userguide/html_single/Hibernate_User_Guide.html#configurations-internal
+#Si no se aplica se demora mucho tiempo en iniciar la aplicación
+spring.jpa.properties.hibernate.temp.use_jdbc_metadata_defaults=false
+
+
+#Cantidad de registros a cargar por transacción, esto impacta en memoria y tiempo
+etl.file_row_cache_size=100
+etl.default.target.table=salida
+
+
+
+

@@ -1,0 +1,23 @@
+# Logging pattern for the console
+spring.main.log-startup-info=OFF
+logging.level.org=OFF
+logging.level.com.zaxxer=OFF
+logging.level.org.springframework=OFF
+logging.level.org.hibernate.SQL=OFF
+
+
+# Database Properties
+#spring.datasource.url=jdbc:postgresql://192.168.73.215:5432/bd_cll72c
+#spring.jpa.properties.hibernate.default_schema=icetex
+#spring.datasource.username=icetex_crm
+#spring.datasource.password=milleicetexcrm
+
+#spring.datasource.url=jdbc:postgresql://10.72.226.11:5432/bd_millenium
+#spring.jpa.properties.hibernate.default_schema=clarototal
+#spring.datasource.username=clarototal_crm
+#spring.datasource.password=milleclarototalcrm
+
+spring.datasource.url=jdbc:postgresql://192.168.73.93:5432/bd_cll72
+spring.jpa.properties.hibernate.default_schema=colpatriaui
+spring.datasource.username=milledesarrollo
+spring.datasource.password=milledesarrollo
